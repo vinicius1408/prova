@@ -9,11 +9,27 @@
 
     //ENTRADA
 
+    const tantoDeHorasQueConsegueDia = Number(prompt("informe quanas horas o viajante consegue viajar por dia"))
+    const tempoTotalViagem = Number(prompt("informe o tempo total da viagem em horas"))
 
     //PROCESSAMENTO
 
-    
+    const diasParaRealizar = Math.ceil(tempoTotalViagem / tantoDeHorasQueConsegueDia)
+    const porcdias = 150 / 100  
+
     //SAÍDA
 
+    if(diasParaRealizar >= 1){
+        document.write(`a viagem vai custar 150 reais`)
+    }
+    else if(diasParaRealizar >= 2 && diasParaRealizar >= 3){
+        document.write(`a viagem vai custar 150 reais com aumento de ${porcdias}`)
+    }
+    else if(diasParaRealizar >= 5){
+        document.write(`a viagem vai custar 150 reais com aumento de ${porcdias}`)
+    }
+    else{
+        document.write(`a viagem vai custar 150 reais com aumento de ${porcdias}`)
+    }
 
 </script>

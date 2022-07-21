@@ -12,11 +12,33 @@
 
     //ENTRADA
 
+    const aulasSemana = Number(prompt("informe a quantidade de aulas que ele da por semana"))
+    const quantidadesProjetos = Number(prompt("informe a quantidade de projetos que ele da"))
+
 
     //PROCESSAMENTO
 
-    
+    const tempoGastoAulas = aulasSemana * 1.5
+    const tempoGastoProjetos = quantidadesProjetos * 3
+    const porcAulas = tempoGastoAulas / 100
+    const porcProjetos = tempoGastoProjetos / 100
+    const cargaHoraria = tempoGastoAulas + tempoGastoProjetos
     //SAÍDA
 
-
+    if(porcProjetos > porcAulas){
+        document.write(`pesquisador > professor <br>`)
+    }
+    else{
+        document.write(`professor > pesquisador <br>`)
+    }
+    
+    if(cargaHoraria <= 30){
+        document.write(`professor precisa trabalhar mais`)
+    }
+    else if(cargaHoraria > 30 && cargaHoraria < 40){
+        document.write(`professor esta cumprindo o contrato`)
+    }
+    else{
+        document.write(`o professor deve rever o contrato`)
+    }
 </script>

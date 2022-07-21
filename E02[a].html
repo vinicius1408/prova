@@ -8,11 +8,26 @@
 
     //ENTRADA
 
+    const quantidadeCombustivel = Number (prompt("informe a quantidade de combustivel para abastecer"))
+    const precoLitro = Number (prompt("informe o preço do litro"))
+    const dinheiro = Number (prompt("informe a quantidade de dinheiro"))
+
 
     //PROCESSAMENTO
 
+    const totalParaPagar = quantidadeCombustivel * precoLitro
+    const troco = dinheiro - totalParaPagar
+    const faltando = totalParaPagar - dinheiro
     
     //SAÍDA
+
+    if(dinheiro > totalParaPagar){
+        document.write(`restara em dinheiro ${troco}`)
+    }
+    else{
+        document.write(`falta ${faltando} em dinheiro`)
+    }
+
 
 
 </script>
